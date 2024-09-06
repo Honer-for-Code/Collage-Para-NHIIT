@@ -60,7 +60,7 @@
     font-size: clamp(14px, 5vw, 24px);
 }
 .banner-text li:first-child span{
-    font-size: clamp(24px, 5vw, 39px);
+    font-size: clamp(24px, 5vw, 37px);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
