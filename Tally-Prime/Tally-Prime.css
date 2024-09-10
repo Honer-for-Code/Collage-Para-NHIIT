@@ -161,16 +161,17 @@
 }
 .cards-content h1{
     text-transform: capitalize;
-    font-size: 35px;
+    font-size: clamp(20px, 5vw, 35px);
+
 }
 .cards-content p{
-    font-size: large;
+    font-size: clamp(15px, 5vw, 20px);
     line-height: 25px;
 }
 .cards-content button{
     border: none;
     outline: none;
-    font-size: 25px;
+    font-size: clamp(15px, 5vw, 25px);
     padding: 15px 30px;
     text-transform: capitalize;
     border-radius: 15px;
@@ -221,8 +222,14 @@
     justify-content: center;
 }
 #cards-img{
-    width: 60%;
+    width: 80%;
     margin-top: -2rem;
 }
-
+.cards-content {
+    gap: 20px;
+}
+.cards-content button{
+    padding: 10px 20px;
+    border-radius: 8px;
+}
 }
