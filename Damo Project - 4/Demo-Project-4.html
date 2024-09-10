@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo-Project-4</title>
+
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root{
+    --max-width: 1400px;
+    --banner-heading-color: #EDB413;
+    --banner-span-color: #ffffff;
+    --heading-h-color: #444444;
+    --heading-hr-bg: #2149BC;
+    --list-item-bg: #F0F0F0; 
+}
+.content-xxl{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 10px;
+}
+.btn-yellow{
+    background-color: #EDB413;
+    color: black;
+}
+.btn-yellow:hover{
+    background-color: #bb8d10;
+}
+.btn-blue{
+    background-color: #136aed;
+    color: rgb(255, 255, 255);
+}
+.btn-blue:hover{
+    background-color: #0d4eb0;
+}
+.btn-green{
+    background-color: #07a714;
+    color: rgb(255, 255, 255);
+}
+.btn-green:hover{
+    background-color: #077410;
+}
+
+
+
+
+
+.banner-container{
+    width: 100%;
+    position: relative;
+}
+.banner-container img{
+    width: 100%;
+}
+#res-img{
+    display: none;
+}
+.banner-text{
+    position: absolute;
+    bottom: 10%;
+    left: 8%;
+    width: 55%;
+    display: grid;
+    row-gap: 25px;
+}
+.banner-text h3{
+    font-size: clamp(30px, 4vw, 60px);
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin: 0;
+    color: var(--banner-heading-color);
+}
+.banner-text span{
+    width: 40%;
+    text-wrap: wrap;
+    font-size: clamp(11px, 4vw, 25px);
+    color: var(--banner-span-color);
+}
+.banner-btn button{
+    outline: none;
+    border: none;
+    height: 35px;
+    width: 130px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 10px 0 0;
+}
+.banner-btn span{
+    text-transform: capitalize;
+    font-size: clamp(12px, 2vw, 15px);
+}
+
+
+
+.card-container{
+    padding: 30px 10px;
+}
+
+
+.text-content{
+    padding: 20px 0;
+}
+.heading h1{
+    font-weight: bolder;
+    text-transform: capitalize;
+    margin: 0;
+    color: var(--heading-h-color);
+    font-size: clamp(20px, 3vh, 30px);
+}
+.heading hr{
+    margin-top: 5px;
+    height: 6px;
+    width: 170px;
+    border-radius: 10px;
+    background-color: var(--heading-hr-bg);
+    opacity: 1;
+}
+.paragraph{
+    padding: 20px 0;
+    text-align: justify;
+    text-wrap: wrap;
+    line-height: 24px;
+}
+
+
+.card-content .heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.cards{
+    display: grid;
+    row-gap: 50px;
+    padding: 20px 0;
+}
+.cards-content{
+    width: 410px;
+    border-radius: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.397);
+    box-shadow: 20px 20px 30px grey;
+    padding: 10px;
+}
+.cards-content img{
+    border-radius: 5px;
+    width: 100%;
+}
+.cards-body{
+    padding: 0 15px;
+}
+.cards-title{
+    text-transform: capitalize;
+    font-size: 18px;
+    margin: 20px 0;
+}
+.cards-title b{
+    font-size: 25px;
+}
+.cards-text{
+    text-align: justify;
+    min-height: 430px;
+}
+.cards-btns{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cards-btns a{
+    width: 48%;
+    text-decoration: none;
+    text-transform: uppercase;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.cards-row{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    justify-content: space-between;
+}
+.sp-cards{
+    width: 650px;
+}
+.cards-body form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;  
+    row-gap: 10px;
+}
+.cards-body form input{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.459);
+    padding: 18px;
+    outline: none;
+}
+.cards-body form input::-webkit-inner-spin-button{
+    display: none;
+}
+.cards-body form select{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.459);
+    padding: 18px;
+    outline: none;
+}
+.cards-body form textarea{
+    resize: none;
+    outline: none;
+    border: 1px solid rgba(128, 128, 128, 0.459);
+    padding: 10px 0 0 15px;
+    border-radius: 5px;
+}
+.cards-body form a .submit-btn{
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 25px;
+}
+.s-text{
+    text-align: justify;
+    min-height: 0px;
+}
+
+
+
+.list-container{
+    background: var(--list-item-bg);
+}
+.list-content{
+    padding: 40px 10px 40px 10px;
+}
+.list-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px; 
+    row-gap: 40px;
+}
+.list-item-img{
+    width: 50%;
+}
+.list-item-img img{
+    width: 100%;
+}
+.list-item-text{
+    width: 40%;
+}
+.list-item-text h2{
+    margin: 20px 0;
+}
+.list-item-text ol{
+    font-size: 20px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+
+
+
+.logo-container{
+    padding: 40px 10px 40px 10px;
+}
+.logo-container .heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.logo-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.logo-content-img{
+    width: 50%;
+}
+.logo-content-img img{
+    width: 100%;
+}
+.logo-content .cards{
+    width: 50%;
+    padding: 40px 0 40px 40px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.logo-content .cards .cards-row{
+    display: flex;
+    width: 100%;
+}
+
+.logo-content .cards .cards-content{
+    width: 48%;
+    height: 100%;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.logo-content .cards .cards-row .cards-content img{
+    width: 100px;
+}
+
+
+
+@media screen and (max-width:767px) {
+    #nor-img{
+        display: none;
+    }
+    #res-img{
+        display: block;
+    }
+    .banner-text{
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        padding: 10px;
+        row-gap: 10px;
+    }
+    .banner-btn button{
+        margin: 0 5px 0 0;
+    }
+    .banner-text span{
+        width: 100%;
+    }
+
+.cards-content{
+    width: 100%;
+}
+    .sp-cards{
+        width: 100%;
+    }
+
+    .list-item{
+        padding: 40px 0 40px 0;
+    }
+
+    .list-item-img{
+        width: 100%;
+    }
+    .list-item-text{
+        width: 100%;
+    }
+
+
+
+    .logo-content-img{
+        width: 100%;
+    }
+    .logo-content .cards{
+        width: 100%;
+        padding: 40px 0 0 0;
+    }
+
+}
+    </style>
+
+</head>
+<body>
+    
+
+    <main>
+        <div class="banner-container">
+            <img src="./Image/short-term-course-banner.webp" alt="" id="nor-img">
+            <img src="./Image/SHORT TERM COURSE 3.webp" alt="" id="res-img">
+            <div class="banner-text">
+                <h3>short term courses</h3>
+                <span>Gain essential skills and exposure to make your career bright.</span>
+                <div class="banner-btn">
+                    <a href="#"><button class="btn-yellow">Apply now</button></a>
+                    <span>to get scholarship upto 50%</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card-container content-xxl">
+            <div class="text-content">
+                <div class="heading">
+                    <h1>short term courses</h1>
+                    <hr>
+                </div>
+                <p class="paragraph">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quibusdam maiores debitis illo tempora quasi rem laborum totam ab nam dolor accusamus obcaecati, culpa mollitia modi aliquam. Delectus, voluptate quaerat!
+                    Quidem culpa maiores repellendus, amet fuga libero adipisci temporibus laboriosam a provident error facilis. Libero, cumque neque, repellat molestias velit nulla eius excepturi laudantium adipisci hic dolore! Voluptatem, magnam veniam?
+                </p>
+            </div>
+
+            <div class="card-content">
+                <div class="heading">
+                    <h1>short term courses</h1>
+                    <hr>
+                </div>
+                <div class="cards">
+                    <div class="cards-row">
+                        <div class="cards-content">
+                            <img src="./Image/programming-language.png" alt="">
+                            <div class="cards-body">
+                                <h5 class="cards-title">Short time <b>data analatic</b> course</h5>
+                                <p class="cards-text">Lorem ipsum dolor sit Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius consequuntur odio labore repellendus, numquam quas quisquam nesc!</p>
+
+                                <div class="cards-btns">
+                                    <a href="#" class="btn-blue">brochure</a>
+                                    <a href="#" class="btn-green">know more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cards-content">
+                            <img src="./Image/programming-language.png" alt="">
+                            <div class="cards-body">
+                                <h5 class="cards-title">Short time <b>data analatic</b> course</h5>
+                                <p class="cards-text">Lorem ipsum dolor sit Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius consequuntur odio labore repellendus, numquam quas quisquam nesc!</p>
+
+                                <div class="cards-btns">
+                                    <a href="#" class="btn-blue">brochure</a>
+                                    <a href="#" class="btn-green">know more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cards-content">
+                            <img src="./Image/programming-language.png" alt="">
+                            <div class="cards-body">
+                                <h5 class="cards-title">Short time <b>data analatic</b> course</h5>
+                                <p class="cards-text">Lorem ipsum dolor sit Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius consequuntur odio labore repellendus, numquam quas quisquam nesc!</p>
+
+                                <div class="cards-btns">
+                                    <a href="#" class="btn-blue">brochure</a>
+                                    <a href="#" class="btn-green">know more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards-row">
+                        <div class="cards-content sp-cards">
+                            <img src="./Image/programming-language.png" alt="">
+                            <div class="cards-body">
+                                <h5 class="cards-title">Short time <b>data analatic</b> course</h5>
+                                <p class="cards-text">Lorem ipsum dolor sit Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius consequuntur odio labore repellendus, numquam quas quisquam nesc!</p>
+
+                                <div class="cards-btns">
+                                    <a href="#" class="btn-blue">brochure</a>
+                                    <a href="#" class="btn-green">know more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cards-content sp-cards">
+                            <img src="./Image/programming-language.png" alt="">
+                            <div class="cards-body">
+                                <h5 class="cards-title">Short time <b>data analatic</b> course</h5>
+                                <p class="cards-text s-text">Lorem ipsum dolor sit Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius consequuntur odio labore repellendus, numquam quas quisquam nesc!</p>
+                                <form>
+                                    <input type="text" placeholder="Your Name">
+                                    <input type="email" placeholder="Your Email">
+                                    <input type="number" placeholder="Your Phone">
+                                    <select>
+                                        <option selected>Open this select menu</option>
+                                        <option>One</option>
+                                        <option>Two</option>
+                                        <option>Three</option>
+                                    </select>
+                                    <select>
+                                        <option selected>Open this select menu</option>
+                                        <option>One</option>
+                                        <option>Two</option>
+                                        <option>Three</option>
+                                    </select>
+                                    <textarea placeholder="Comments"></textarea>
+                                    <a href="#"><button class="submit-btn btn-yellow">Submit</button></a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="list-container">
+           <div class="list-content content-xxl">
+                <div>
+                    <div class="heading">
+                        <h1>short term courses</h1>
+                        <hr>
+                    </div>
+                    <p class="paragraph">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quibusdam maiores debitis illo tempora quasi rem laborum totam ab nam dolor accusamus obcaecati, culpa mollitia modi aliquam. Delectus, voluptate quaerat!
+                        Quidem culpa maiores repellendus, amet fuga libero adipisci temporibus laboriosam a provident error facilis. Libero, cumque neque, repellat molestias velit nulla eius excepturi laudantium adipisci hic dolore! Voluptatem, magnam veniam?
+                    </p>
+                </div>
+
+                <div class="list-item">
+                    <div class="list-item-img">
+                        <img src="./Image/accounting-job-image.webp" alt="">
+                    </div>
+                    <div class="list-item-text">
+                        <h2>You will able to be :-</h2>
+                        <ol>
+                            <li>lorem ipsum</li>
+                            <li>lorem ipsum</li>
+                            <li>lorem ipsum</li>
+                            <li>lorem ipsum</li>
+                            <li>lorem ipsum</li>
+                            <li>lorem ipsum</li>
+                            <li>lorem ipsum</li>
+                            <li>lorem ipsum</li>
+                            <li>lorem ipsum</li>
+                            <li>lorem ipsum</li>
+                            <li>lorem ipsum</li>
+                            <li>lorem ipsum</li>
+                            <li>lorem ipsum</li>
+                        </ol>
+                    </div>
+                </div>
+           </div>
+        </div>
+
+        <div class="logo-container content-xxl">
+            <div class="heading">
+                <h1>short term courses</h1>
+                <hr>
+            </div>
+
+
+            <div class="logo-content">
+                <div class="logo-content-img">
+                    <img src="./Image/who can join.webp" alt="">
+                </div>
+
+                <div class="cards">
+                    <div class="cards-row">
+                        <div class="cards-content">
+                            <img src="./Image/logo6.png" alt="">
+                            <span>Backup class</span>
+                        </div>
+                        <div class="cards-content">
+                            <img src="./Image/logo6.png" alt="">
+                            <span>Backup class</span>
+                        </div>
+                    </div>
+                    <div class="cards-row">
+                        <div class="cards-content">
+                            <img src="./Image/logo6.png" alt="">
+                            <span>Backup class</span>
+                        </div>
+                        <div class="cards-content">
+                            <img src="./Image/logo6.png" alt="">
+                            <span>Backup class</span>
+                        </div>
+                    </div>
+                    <div class="cards-row">
+                        <div class="cards-content">
+                            <img src="./Image/logo6.png" alt="">
+                            <span>Backup class</span>
+                        </div>
+                        <div class="cards-content">
+                            <img src="./Image/logo6.png" alt="">
+                            <span>Backup class</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+</body>
+</html>

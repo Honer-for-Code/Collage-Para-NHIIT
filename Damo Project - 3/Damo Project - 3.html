@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damo Project 3</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+
+    <!-- ===== CSS ===== -->
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        /* ===== root ===== */
+
+        .container-max {
+            width: 100%;
+            padding: 15px;
+        }
+
+        .container-1400 {
+            max-width: 1400px;
+            padding: 15px;
+            margin: auto;
+        }
+
+        .grid-row {
+            display: flex;
+        }
+
+        .grid-col {
+            width: 50%;
+        }
+
+        /* ===== header ===== */
+
+        header {
+            height: 100px;
+        }
+
+        /* ===== heading ===== */
+
+        main.container-max {
+            padding: 0;
+        }
+
+        .heading-container {
+            padding: 0;
+            background: url(./Image/img.webp);
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .heading-container-text {
+            padding: 100px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .heading-container-text h2 {
+            text-transform: capitalize;
+            color: white;
+            font-size: clamp(40px, 4vw, 80px);
+        }
+
+        /* ===== intro ===== */
+
+        .intro-container {
+            padding: 100px 0;
+        }
+
+        .intro-container .container-1400 .grid-row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .intro-text-content {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 0 0 50px 0;
+        }
+
+        .intro-text-content h2 {
+            font-size: clamp(35px, 4vw, 50px);
+            text-transform: uppercase;
+            font-weight: lighter;
+            line-height: 60px;
+        }
+
+        h2 b {
+            font-weight: bold;
+        }
+
+        .intro-text-content p {
+            text-align: justify;
+            font-size: clamp(10px, 4vw, 18px);
+            margin: 30px 0 20px 0;
+            line-height: 30px;
+            padding: 0 20px 0 0;
+        }
+
+        .intro-img-content {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .roter {
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: roter infinite linear;
+            animation-duration: 8s;
+            background-color: #685f5f1e;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(40px);
+        }
+
+        @keyframes roter {
+            100% {
+                rotate: 360deg;
+            }
+        }
+
+        .intro-img-content img {
+            width: auto;
+            max-width: 100%;
+        }
+
+        /* ===== gol ===== */
+
+        .gol-container.container-max {
+            padding: 0;
+        }
+
+        .gol-container .grid-row {
+            background-color: #e9e9e9;
+        }
+
+        .gol-container .grid-row .grid-col {
+            padding: 0;
+            display: flex;
+        }
+
+        .gol-container-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .gol-container-text {
+            height: 100%;
+            padding: 0 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .gol-container-text h2 {
+            font-size: clamp(35px, 4vw, 50px);
+            text-transform: uppercase;
+            font-weight: lighter;
+        }
+
+        .gol-container-text hr {
+            background-color: rgb(255, 0, 51);
+            height: 6px;
+            opacity: 1;
+            border: none;
+            margin: 30px 0 50px 0;
+        }
+
+        .gol-container-text p {
+            font-size: clamp(10px, 4vw, 18px);
+            text-align: justify;
+            line-height: 30px;
+        }
+
+        /* ===== courses ===== */
+
+        .courses-container {
+            margin: 100px 0;
+            text-align: center;
+        }
+
+        .courses-container-heading {
+            margin: 0 0 50px 0;
+        }
+
+        .courses-container-heading h2 {
+            font-size: clamp(35px, 4vw, 50px);
+            text-transform: uppercase;
+            font-weight: lighter;
+        }
+
+        .courses-container p {
+            font-size: clamp(10px, 4vw, 18px);
+            line-height: 30px;
+
+        }
+
+        .courses-container-btn button {
+            margin-top: 40px;
+            border: none;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: crimson;
+            color: white;
+            font-weight: bold;
+            font-size: clamp(15px, 4vw, 25px);
+        }
+
+        @media screen and (max-width:991px) {
+
+            /* ===== root ===== */
+
+            .grid-row {
+                flex-wrap: wrap;
+            }
+
+            .grid-col {
+                width: 100%;
+            }
+
+            /* ===== intro ===== */
+
+            .intro-container {
+                padding: 20px 0;
+            }
+
+            .intro-text-content h2 {
+                line-height: 40px;
+            }
+
+            .intro-text-content p {
+                line-height: 25px;
+                padding: 0;
+            }
+
+            /* ===== gol ===== */
+
+
+            .gol-container-text {
+                padding: 20px 10px;
+            }
+
+            .gol-container-text hr {
+                margin: 20px 0;
+            }
+
+            .gol-container-text p {
+                line-height: 25px;
+            }
+
+            /* ===== courses ===== */
+
+            .courses-container {
+                margin: 20px 0;
+                padding: 0;
+            }
+
+            .courses-container-heading {
+                margin-bottom: 20px;
+            }
+
+            .courses-container p {
+                text-align: justify;
+                line-height: 25px;
+            }
+
+            .courses-container-btn button {
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <!-- ===== main ===== -->
+
+    <main class="container-max">
+
+        <!-- ===== heading ===== -->
+
+        <div class="container-max heading-container">
+            <div class="container-1400 heading-container-text">
+                <h2>About us</h2>
+            </div>
+        </div>
+
+        <!-- ===== intro ===== -->
+
+        <div class="container-max intro-container">
+            <div class="container-1400">
+                <div class="grid-row">
+                    <div class="grid-col">
+                        <div class="intro-text-content">
+                            <h2>wealcome to <br> <b>micro-pro training institute</b></h2>
+
+                            <p>For Micro – Pro , the move from Training to Total Solutions has been brisk and an
+                                eventual one, having entered the field of computers in 1994, chiefly as a computer
+                                training company, Micro – Pro scaled new heights by going into software & hardware
+                                marketing. Today Micro – Pro offers solutions in every field of application ranging from
+                                vocational training for grid-college students to high end training for corporate and
+                                professionals, enterprise software development to ERP/CRM implementations, IT product
+                                solution to security surveillance solution, . A prodigious achievement, inspired by the
+                                company’s commitment to the customer. Backed by technical excellence and a team of
+                                highly qualified and skilled professionals</p>
+                        </div>
+                    </div>
+                    <div class="grid-col">
+                        <div class="intro-img-content">
+                            <img src="./Image/img 2.png" alt="Intro-Image">
+                            <div class="roter"><img src="./Image/badge.png" alt="roter"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== gol ===== -->
+
+        <div class="container-max gol-container">
+            <div class="grid-row">
+                <div class="grid-col">
+                    <div class="gol-container-img">
+                        <img src="./Image/img 3.jpg" alt="gol-logo">
+                    </div>
+                </div>
+                <div class="grid-col">
+                    <div class="gol-container-text">
+                        <div>
+                            <h2>Our <br> <b>mission
+                                    & vision</b></h2>
+                            <hr>
+                            <p>Micropro desires to impart
+                                knowledge and training in newer technologies and diverse fascinating fields to young and
+                                old, genius and not so intelligent highly educated and not so much educated at
+                                reasonable
+                                cost. We believe knowledge should be accessible to all. We use advance technology and
+                                modern
+                                tools to empower every individual. Our mission is to provide a right platform of quality
+                                education with affordable fee in computer and Information technology education.
+                                <br>
+                                <br>
+                                Micropro is strongly committed to provide economic independence in IT sector. We provide
+                                quality computer and information technology education with affordable fee through our
+                                training institute. We want to fulfill the dreams of the youths in India and contribute
+                                to
+                                the development for our country. Our vision is to develop human resources to discover
+                                and
+                                disseminate computer knowledge to extend computer knowledge and its application beyond
+                                the
+                                boundaries.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ===== courses ===== -->
+
+        <div class="container-max courses-container">
+            <div class="container-1400">
+                <div class="courses-container-heading">
+                    <h2>OUR POPULAR<br> <b>COURSES</b></h2>
+                </div>
+                <p>Learning new things is everyone’s dream but finding the
+                    right platform is quite difficult. No need to worry about that Micro-pro is the best platform to
+                    learn and apply for your dream job. With a wide range of popular courses which will make your job
+                    ready just, you are one step ahead. Doing the right course at right time is very much efficient.
+                    <br>
+                    <br>
+                    In this 21st century without knowing the programing language you can’t move a single step which
+                    makes it very much difficult to survive in the corporate sector. Micropro is the best computer
+                    training institute which offers you helpful courses that make you the best to find your suitable job
+                    as well as to land in your dream company. Starting from Matlab to Python with MySQL the ranges of
+                    courses are very much attractive for IT students. Come and join the course now and build an amazing
+                    career in the IT & Technology positions in the top-rated MNC. Just one thing matters the most i.e.
+                    the hard work toward grabbing the knowledge with the best industrial training institute will make
+                    anyone look quite brilliant.
+                </p>
+                <div class="courses-container-btn">
+                    <a href="#"><button>See
+                            All our courses</button></a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <!-- ==== bootstrap.js ===== -->
+
+</body>
+
+</html>
