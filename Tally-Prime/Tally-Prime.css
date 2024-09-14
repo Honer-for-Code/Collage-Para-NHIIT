@@ -7,7 +7,7 @@
     width: 100%;
 }
 .container-max{
-    max-width: 1400px;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -128,6 +128,7 @@
 }
 .content-4{
     max-width: 500px;
+    padding-right: 15px;
 }
 .content-4 img{
     width: 100%;
@@ -182,6 +183,19 @@
 .cards-content button:hover{
     background-color: #da881d;
 }
+.h1{
+    height: 60px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    margin: auto;
+    background: url(../images/do-more-heading-bg.svg) no-repeat;
+    /* background-position-x: 19rem;
+    background-size: 31.4rem 5rem; */
+    background-size: contain;
+}
 
 
 
@@ -231,5 +245,9 @@
 .cards-content button{
     padding: 10px 20px;
     border-radius: 8px;
+}
+
+.content-4{
+    padding: 0 15px;
 }
 }
