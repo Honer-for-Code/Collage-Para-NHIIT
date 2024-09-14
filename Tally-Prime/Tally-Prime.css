@@ -299,6 +299,7 @@
         padding: 60px 15px;
     .cards {
         background-color: #f1fbff;
+        padding: 0 15px;
     }
     }
 }
