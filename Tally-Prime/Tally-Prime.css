@@ -17,11 +17,12 @@
 /* ===== main-header ===== */
 
 
-/* .main-banner-content {
-    background: url(../images/bg-1.svg) no-repeat;
+.main-banner-content {
+    /* background: url(../images/bg-1.svg) no-repeat;
     background-position: center bottom;
-    background-size: cover;
-} */
+    background-size: cover; */
+    background: transparent;
+}
 
 /* .main-banner {
     display: flex;
