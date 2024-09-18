@@ -13,7 +13,130 @@
 }
 
 
-.head-container {
+
+
+.text-img-header {
+    display: flex;
+    gap: 15px;
+    background: #3d3c3c;
+    color: white;
+}
+
+.text-header-container {
+    padding: 0 15px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.text-header-container section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.text-header-container section h1 {
+    font-size: clamp(25px, 4vw, 50px);
+    text-transform: capitalize;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.text-header-container section p {
+    font-size: 12px;
+    text-transform: capitalize;
+    line-height: 20px;
+    text-align: justify;
+}
+
+.text-header-container a {
+    text-decoration: none;
+}
+
+.text-header-container button {
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #782efa;
+    color: white;
+    font-size: 18px;
+    animation: zoom 1s ease-out infinite;
+    word-spacing: 6px;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.text-header-container button:is(:hover, :focus) {
+    background-color: #6616f0;
+}
+
+.img-header-container {
+    width: 50%;
+    position: relative;
+}
+
+.img-header-container img {
+    width: 100%;
+}
+
+
+.img-header-container #img-2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 500px;
+}
+
+
+
+@media screen and (max-width:500px) {
+    .text-img-header {
+        flex-wrap: wrap-reverse;
+        gap: 40px;
+    padding-bottom: 15px;
+
+        .text-header-container {
+            width: 100%;
+            gap: 20px;
+        }
+    }
+
+    .img-header-container {
+        #img-1 {
+            width: 100vw;
+        }
+
+        #img-2 {
+            width: 85vw;
+            bottom: 4px;
+            left: 100px;
+            /* right: 15px; */
+            /* background-color: red; */
+        }
+    }
+}
+
+
+
+
+
+/* .head-container {
     position: relative;
 
     .image-content img {
@@ -66,7 +189,7 @@
         }
 
     }
-}
+} */
 
 @keyframes zoom {
     0% {
