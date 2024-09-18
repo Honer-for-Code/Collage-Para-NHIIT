@@ -136,7 +136,7 @@
 
 
 
-/* .head-container {
+.head-container {
     position: relative;
 
     .image-content img {
@@ -189,7 +189,7 @@
         }
 
     }
-} */
+}
 
 @keyframes zoom {
     0% {

@@ -17,17 +17,20 @@
 /* ===== main-header ===== */
 
 
-.main-banner-content {
+/* .main-banner-content {
     background: url(../images/bg-1.svg) no-repeat;
     background-position: center bottom;
     background-size: cover;
-}
+} */
 
-.main-banner {
+/* .main-banner {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 50px 0 80px 25px;
+} */
+.main-banner img{
+    width: 100%;
 }
 
 .content-1 {
