@@ -258,7 +258,9 @@
     padding: 45px;
     font-size: clamp(17px, 5vw, 27px);
 }
-
+.img-2{
+    display: none;
+}
 
 
 @media screen and (max-width:600px) {
@@ -266,6 +268,17 @@
         flex-wrap: wrap;
         justify-content: center;
         /* padding: 30px 15px 70px 15px; */
+
+        .btn-container{
+            left: 20px;
+            bottom: 50px;
+        }
+        .btn-container button{
+            padding: 10px 20px;
+            font-size: 12px;
+            border-radius: 8px;
+            color: #065593;
+        }
     }
 
     .banner-btns {
@@ -327,5 +340,12 @@
             background-color: #f1fbff;
             padding: 0 15px;
         }
+    }
+
+    .img-1{
+        display: none;
+    }
+    .img-2{
+        display: block;
     }
 }
