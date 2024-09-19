@@ -15,6 +15,21 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
+    <style>
+    @media screen and (max-width:1400px) {
+    .r-2{
+        display: none;
+    }
+}
+@media screen and (max-width:460px) {
+    .r-1{
+        display: none;
+    }
+    .r-2{
+        display: block;
+    }
+}
+</style>
 </head>
 
 <body>
@@ -52,8 +67,8 @@
                 <!-- <div class="content-2">
                     <img src="../images/img-1.svg" alt="dfg">
                 </div> -->
-                <img src="../images/tally-banner.webp" alt="">
-                <img src="../images/banner.webp" alt="" style="display:none;">
+                <img src="../images/tally-banner.webp" alt="" class="r-1">
+                <img src="../images/banner.webp" alt="" clas="r-2">
 
                 <a href="#" class="btn-container">
                     <button>download tally prime now</button>
