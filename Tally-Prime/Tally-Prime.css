@@ -48,6 +48,20 @@
         font-size: 20px;
         border-radius: 8px;
         color: #065593;
+        animation: zoom 1s ease-out infinite;
+    }
+}
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }
 .main-banner img {
@@ -165,8 +179,9 @@
 
 .content-3 p {
     text-align: justify;
-    font-size: 20px;
+    font-size: clamp(1px, 2.8vw, 20px);
     line-height: 25px;
+    /* background-color: red; */
 }
 
 .content-4 {
@@ -211,12 +226,13 @@
 
 .cards-content h1 {
     text-transform: capitalize;
-    font-size: clamp(20px, 5vw, 35px);
+    font-size: clamp(30px, 2vw, 35px);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 
 .cards-content p {
-    font-size: clamp(15px, 5vw, 20px);
+    font-size: clamp(1px, 2.8vw, 20px);
     line-height: 25px;
 }
 
