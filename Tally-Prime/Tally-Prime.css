@@ -363,4 +363,7 @@
     .img-2{
         display: block;
     }
+    video#cards-img{
+        width: 100%;
+    }
 }
