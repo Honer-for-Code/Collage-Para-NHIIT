@@ -179,7 +179,7 @@
 
 .content-3 p {
     text-align: justify;
-    font-size: clamp(1px, 2.8vw, 20px);
+    font-size: clamp(5px, 3.5vw, 20px);
     line-height: 25px;
     /* background-color: red; */
 }
@@ -232,7 +232,7 @@
 }
 
 .cards-content p {
-    font-size: clamp(1px, 2.8vw, 20px);
+    font-size: clamp(5px, 3.5vw, 20px);
     line-height: 25px;
 }
 
