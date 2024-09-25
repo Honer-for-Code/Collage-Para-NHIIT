@@ -277,6 +277,9 @@
 .img-2{
     display: none;
 }
+video#cards-img{
+    border-radius: 5px;
+}
 
 
 @media screen and (max-width:600px) {
