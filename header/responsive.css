@@ -104,16 +104,6 @@ header {
                         transition: all .2s ease-in-out;
                     }
 
-                    .button {
-                        border: none;
-                        outline: none;
-                        background: #0e3477;
-                        color: white;
-                        padding: 5px 15px;
-                        border-radius: 4px;
-                        text-transform: capitalize;
-                    }
-
                 }
 
                 .link:is(:hover, :focus-within) .bx {
@@ -138,6 +128,18 @@ header {
                         color: white;
                     }
                 }
+            }
+            .li .login{
+                text-decoration: none;
+            }
+            .li a .link {
+                border: none;
+                outline: none;
+                background: #0e3477;
+                color: white;
+                padding: 5px 15px;
+                border-radius: 4px;
+                text-transform: capitalize;
             }
 
             .li:is(:hover, :focus-within) .ulul {
@@ -236,14 +238,15 @@ header {
                     .link {
                         width: 100%;
                     }
-                    .link{
-
+                    .link:is(:hover, :focus-within){
+                        background-color: #000000a6;
                     }
 
                     .ulul{
                         margin: 10px 15px;
                         position: static;
                         border-radius: 5px;
+                        overflow: hidden;
                     }
                 }
             }
