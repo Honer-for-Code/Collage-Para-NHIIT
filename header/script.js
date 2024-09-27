@@ -1,6 +1,6 @@
-const togglebtn = document.querySelector('.navigation-dropedown')
-const togglebtnicon = document.querySelector('.navigation-dropedown i')
-const dropdownManu = document.querySelector('.ul')
+const togglebtn = document.querySelector('.navigation-dropdown-menu')
+const togglebtnicon = document.querySelector('.navigation-dropdown-menu i')
+const dropdownManu = document.querySelector('#ul')
     
         togglebtn.onclick = function () {
         dropdownManu.classList.toggle ('open')
