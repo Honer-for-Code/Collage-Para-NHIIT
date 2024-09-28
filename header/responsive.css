@@ -17,12 +17,12 @@ header {
             .button {
                 border: none;
                 outline: none;
-                /* font-size: 20px; */
                 text-transform: capitalize;
                 padding: 5px 20px;
                 border-radius: 3px;
-                background: linear-gradient(90deg, hsla(45, 100%, 50%, 1) 0%, hsla(325, 98%, 48%, 1) 100%);
-                color: white;
+                background: #faae14;
+                /* background: linear-gradient(90deg, hsla(45, 100%, 50%, 1) 0%, hsla(325, 98%, 48%, 1) 100%); */
+                color: rgb(41, 41, 41);
                 margin-left: 10px;
             }
         }
@@ -47,7 +47,7 @@ header {
 
                 button.link {
                     text-decoration: none;
-                    color: #ffd904;
+                    color: #faae14;
                     border: none;
                     outline: none;
                     background: transparent;
@@ -77,6 +77,10 @@ header {
                     padding: 0;
                     margin: 0;
                     list-style: none;
+
+                    .li{
+
+                    }
                 }
             }
 
@@ -224,8 +228,12 @@ header {
             }
 
             .ul {
-                .link {
-                    color: black;
+                .li{
+                    .link{
+                        .bx{
+                            color: #0060af;
+                        }
+                    }
                 }
             }
         }
@@ -244,8 +252,9 @@ header {
                     text-transform: capitalize;
                     padding: 5px 10px;
                     border-radius: 3px;
-                    background: linear-gradient(90deg, hsla(45, 100%, 50%, 1) 0%, hsla(325, 98%, 48%, 1) 100%);
-                    color: white;
+                    background: #faae14;
+                    /* background: linear-gradient(90deg, hsla(45, 100%, 50%, 1) 0%, hsla(325, 98%, 48%, 1) 100%); */
+                    color: #000000;
                     text-wrap: nowrap;
                 }
             }
