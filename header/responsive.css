@@ -41,19 +41,45 @@ header {
             margin: 0;
             list-style: none;
             display: flex;
-            column-gap: 15px;
 
-            .link {
-                text-decoration: none;
-                color: white;
-                display: flex;
-                align-items: center;
-                column-gap: 5px;
+            .li{
+                position: relative;
 
-                .bx {
-                    font-size: 25px;
+                button.link {
+                    text-decoration: none;
+                    color: #ffd904;
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                    padding: 0;
+                    display: flex;
+                    align-items: center;
+    
+                    .bx {
+                        font-size: 35px;
+                    }
+                    .bx.bx-chevron-right{
+                        font-size: 20px;
+                        transition:  all .2s ease-in-out;
+                    }
+                }
+
+                button.link:is(:hover, :focus-within) .bx.bx-chevron-right{
+                    transform: rotate(90deg);
+                }
+
+                .ulul{
+                    position: absolute;
+                    top: 122%;
+                    right: 0;
+                    background-color: rebeccapurple;
+                    z-index: 1;
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
                 }
             }
+
         }
     }
 
@@ -190,7 +216,7 @@ header {
             background: antiquewhite;
 
             .img-container {
-                width: 120px;
+                width: 150px;
 
                 .image {
                     width: 100%;
