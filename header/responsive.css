@@ -75,14 +75,15 @@ header {
                     right: 0;
                     background-color: #c7c6c5;
                     z-index: 1;
-                    padding: 20px 10px;
+                    padding: 20px 15px;
                     margin: 0;
                     list-style: none;
-                    display: none;
+                    display: flex;
                     row-gap: 5px;
                     flex-direction: column;
                     border-bottom-left-radius: 5px;
                     border-bottom-right-radius: 5px;
+                    width: 300px;
 
                     .li {
                         display: flex;
@@ -100,7 +101,10 @@ header {
                             display: flex;
                             align-items: center;
                             justify-content: space-between;
-                            width: 82%;
+                            width: 55%;
+                            margin-left: 15px;
+                            margin-bottom: 5px;
+                            /* background-color: #faae14; */
 
                             .bx {
                                 font-size: 25px;
@@ -111,7 +115,6 @@ header {
                                 text-decoration: none;
                                 color: #000000;
                                 display: flex;
-                                justify-content: center;
                                 text-wrap: nowrap;
                             }
                         }
@@ -124,8 +127,8 @@ header {
                                 border: none;
                                 background-color: #0e3477;
                                 color: white;
-                                padding: 5px 20px;
-                                margin: 10px 0 0 0;
+                                padding: 8px 20px;
+                                margin: 15px 0 0 0;
                                 border-radius: 4px;
                                 text-transform: capitalize;
                             }
@@ -135,18 +138,25 @@ header {
                             width: 100%;
                             flex-direction: column;
                             align-items: start;
-                            margin-bottom: 20px;
+                            margin-bottom: 25px;
 
+                            .link{
+                                width: 100%;
+                                margin: 0;
+                            }
                             div {
                                 display: flex;
                                 flex-direction: column;
+                                align-items: flex-start;
                                 width: 100%;
+                                margin: 0;
                             }
 
                             h6 {
                                 text-transform: capitalize;
                                 font-weight: bold;
                                 color: #636363;
+                                margin-bottom: 10px;
                             }
                         }
 
@@ -157,7 +167,7 @@ header {
                     }
 
                     .li:last-child .li-content{
-                        margin: 0;
+                        margin: 0 0 0 15px;
                     }
                 }
             }
