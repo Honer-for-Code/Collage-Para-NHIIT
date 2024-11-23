@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    background: #eefaff;
+}
+
 .container-normal {
     width: 100%;
 }
@@ -163,6 +167,7 @@
     justify-content: space-between;
     gap: 45px;
     align-items: center;
+
 }
 
 .content-3 {
@@ -187,6 +192,7 @@
 .content-4 {
     width: 500px;
     padding-right: 15px;
+
 }
 
 .content-4 img {
