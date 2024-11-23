@@ -308,6 +308,14 @@ video#cards-img{
 
     .why {
         flex-wrap: wrap;
+
+        .content-4{
+            width: 100%;
+
+            video{
+                width: 100%;
+            }
+        }
     }
 
     .container-cards {
